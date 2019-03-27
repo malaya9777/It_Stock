@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ITStock
 {
@@ -20,7 +16,17 @@ namespace ITStock
 
         private void loadGrid()
         {
-            
+            grdReport.DataSource = db.Distributions.Select(n => new
+                                    {
+
+                                        n.ID,
+                                        n.SectionName._Section,
+                                        Device = n.Device.Make + " "+ n.Device.Model+" "+ n.Device.SerialNo,
+                                        n.ReceiverName,
+                                        n.DistributionDate
+
+                                    });
+            grdReport.DataBind();
         }
     }
 }

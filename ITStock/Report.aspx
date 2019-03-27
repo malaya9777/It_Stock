@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:GridView ID="grdReport" runat="server" CssClass="table-striped" GridLines="Horizontal">
+    <asp:GridView ID="grdReport" runat="server" CssClass="table-striped" GridLines="Horizontal" AutoGenerateColumns="true">
         <Columns>
 
         </Columns>
